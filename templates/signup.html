@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>CoursifyHire</title>
+</head>
+<body>
+    
+        <div class="signup-inner">
+            <div class="signup-left">
+                <div class="top-img">
+                    <img src="static/img/graphic2.webp" height="380px"  width="100%" alt="">
+                </div>
+                <div class="mid-content">
+                   <h2>Find the job<br> made for<br> you.</h2>
+                   <p>Browse over 130K jobs at top companies and fast-growing startups.</p>
+                </div>
+
+            <div class="bottom-img">
+                <img src="static/img/graphic.webp" height="150px" width="150px" alt="">
+            </div>
+            </div>
+
+            <div class="signup-right">
+              <div class="signup-wraper">
+                <div class="form-header">
+                    <div class="logo">
+                        <h2><strong>Coursify Hire</strong></h2>
+                        
+                    </div>
+                    <h2 class="headline">Create Account</h2>
+                    <p class="subtitle">Find your next opportunity!</p>
+                    {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-success" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+                </div>
+                <div class="form-body">
+                    <form action="{{ url_for('signup') }}"  method="POST">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="lable">
+                                    <label for="username">Full Name: </label>
+                                </div>
+                                <div class="input">
+                                    <input  class="form-control" type="text" name="username" id="username" required>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="lable">
+                                     <label for="email">Email:</label>
+                                </div>
+                                <div class="input">
+                                     <input class="form-control" type="email" name="email" id="email" required>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="lable">
+                                    <label for="password">Password:</label>
+                                </div>
+                                <div class="input">
+                                    <input  class="form-control" type="password" name="password" id="password" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-button">
+                             <button type="submit" class="btn btn-primary">Sign Up</button>
+                        </div>
+                        
+                    </form>
+
+                    <div class="already-account">
+                        <strong>Already have account? <a href="{{ url_for('login') }}">Login</a></strong>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+</html>

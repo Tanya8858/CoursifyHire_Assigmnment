@@ -1,0 +1,386 @@
+.hader-link {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    /* text-decoration: none; */
+}
+
+.hader-link a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding-left: 26px;
+    font-weight: 400;
+
+
+}
+
+a.navbar-brand {
+    align-items: center;
+    text-align: center;
+    margin-left: 96px;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.header-container {
+    padding: 34px;
+}
+
+.login a {
+    border: 1px solid #00000052;
+    border-radius: 9px;
+    margin-left: 25px;
+    padding: 6px 13px;
+    transition: all 0.7s;
+}
+
+.login:hover a {
+    background: black;
+    color: white;
+}
+
+.signup a {
+    background: black;
+    color: white;
+    margin-left: 25px;
+    padding: 6px 13px;
+    border-radius: 9px;
+    border: 1px solid #00000052;
+    transition: all 0.7s;
+}
+
+.signup:hover a {
+    background: white;
+    border: 1px solid #00000052;
+    color: black;
+}
+
+.intro-text h2 {
+    font-size: 83px;
+    margin-bottom: 30px;
+}
+
+.intro-text p {
+    font-size: 33px;
+    font-weight: 500;
+    color: #000000ad;
+    margin-bottom: 37px;
+}
+
+
+.intro-text a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid #00000052;
+    padding: 9px 16px;
+    border-radius: 9px;
+    transition: all 0.7s;
+}
+
+.intro-text:hover a {
+    color: white;
+    background: black;
+}
+
+.intro-img img {
+    margin-left: 196px;
+}
+
+.intro-img img {
+    width: 75%;
+}
+
+.intro-section {
+    margin-top: 52px;
+}
+
+.col-md-12 .company-logolist {
+
+    height: 200px;
+    width: 200px;
+}
+
+
+.step-logo img {
+    /* position: absolute; */
+    top: 10%;
+    left: 11%;
+    font-size: 42px;
+}
+
+.inner-steps {
+    position: relative;
+    border-top: 1px solid #0000005c;
+    border-bottom: 1px solid #0000005c;
+    padding: 41px;
+}
+
+.setup-descripts h2 {
+    font-size: 16px;
+    color: #111111de;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    line-height: 1.4;
+    margin-top: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.setup-descripts p {
+    font-size: 15px;
+    color: #000000c4 !important;
+    letter-spacing: -.01px;
+    line-height: 1.5;
+    margin-top: 0;
+}
+
+.inner-area-setep {
+    border-right: 1px solid #0000005c;
+}
+
+.seteps-section {
+    margin-top: 83px;
+}
+
+.inner-area-setep:hover .step-logo2 img {
+    border: 3px solid #4242978f;
+    border-radius: 50%;
+    padding: 6px;
+}
+
+.step-logo2 img {
+    transition: all 0.7s;
+}
+
+.inner-area-setep:hover .step-logo img {
+    border: 3px solid #4242978f;
+    border-radius: 50%;
+    padding: 6px;
+}
+
+.step-logo img {
+    transition: all 0.7s;
+}
+
+.inner-step-getjob:hover .step-logo1 img {
+    border: 3px solid #4242978f;
+    border-radius: 50%;
+    padding: 6px;
+}
+
+.step-logo1 img {
+    transition: all 0.7s;
+}
+
+h1.company-head {
+    font-size: 24px;
+    color: #2d2d2d;
+    margin-top: 92px;
+    margin-bottom: 60px;
+    letter-spacing: 1.1px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.leading-companies {
+    border-top: 1px solid #00000073;
+    border-bottom: 1px solid #0000008f;
+}
+
+.talent-inner {
+    align-items: flex-start;
+    margin-bottom: 24px;
+    display: flex;
+}
+
+.icon img {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+
+
+.taletn-text h2 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 54px;
+    margin-top: 24px;
+}
+
+.talent {
+    margin-top: 77px;
+}
+
+.talent-img img {
+    margin-left: 119px;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -8px;
+    display: flex;
+    margin-top: 38px;
+}
+
+.button-grp a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid #0000008c;
+    border-radius: 9px;
+    padding: 9px 17px;
+    margin-left: 14px;
+    transition: all 0.7s;
+}
+
+.button-grp:hover a {
+    background: black;
+    color: white;
+}
+
+.copyright.text-center {
+    margin-bottom: 34px;
+    margin-top: 34px;
+}
+
+.copyright.text-center p {
+    color: #000000a3;
+}
+
+.icons-footer.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.icons-footer.text-center img {
+    margin-left: 22px;
+}
+
+.signup-inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+
+.logo h2 {
+    font-family: Graphik, sans-serif;
+    font-size: 36px;
+    line-height: 28px;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.button-grp1 a {
+    text-decoration: none;
+    color: white;
+    background: black;
+    padding: 9px 17px;
+    margin-left: 29px;
+    border-radius: 9px;
+    transition: all 0.7s;
+}
+
+.button-grp1:hover a {
+    color: black;
+    background: white;
+    border: 1px solid #000000a8;
+}
+
+h2.headline {
+    font-family: Graphik, sans-serif;
+    font-size: 27px;
+    line-height: 28px;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+p.subtitle {
+    color: #000;
+    margin-bottom: 24px;
+    margin-top: 0;
+}
+
+.signup-wraper {
+    max-width: 324px;
+    margin: 0 auto;
+    font-family: Graphik, sans-serif;
+    color: #0e1111;
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 0;
+}
+
+.signup-right {
+    margin-left: 345px;
+    margin-top: 69px;
+}
+
+.row input {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 4px;
+    border: 1px solid #00000054;
+    padding: 5px 5px;
+}
+
+.form-button a {
+    text-decoration: none;
+    color: white;
+    background: black;
+    /* padding: 8px 109px; */
+    margin-top: 27px;
+    /* width: 100%; */
+    padding: 13px 124px;
+    border-radius: 9px;
+}
+
+.form-button {
+    margin-top: 30px;
+}
+
+.already-account {
+    margin-top: 39px;
+}
+
+.mid-content {
+    text-align: center;
+}
+
+.mid-content h2 {
+    font-size: 46px;
+    font-weight: 700;
+}
+
+.mid-content p {
+    font-size: 16px;
+}
+
+.forget-pas {
+    margin-top: 10px;
+}
+
+.forget-pas a {
+    text-decoration: none;
+    margin-left: 173px;
+}
+
+.form-button button {
+    background: black;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.login-img img {
+    margin-top: 65px;
+}
+
+.hader-link h2 {
+    margin-left: 19px;
+    font-size: 27px;
+}

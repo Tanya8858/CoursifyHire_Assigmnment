@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>CoursifyHire</title>
+</head>
+
+<body>
+
+    <div class="header-container">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <a class="navbar-brand" href="#">CoursifyHire</a>
+
+                </div>
+
+                <div class="col-md-8">
+                    <div class="hader-link">
+                        <a href="">Discover</a>
+                        <a href="">For Job Seekers</a>
+                        <a href="">For Companies</a>
+                        {% if logged_in %}
+                        <h2>Welcome, {{ user_name }}!</h2>
+                        <div class="login">
+                            <a href="{{ url_for('logout')}}">logout</a>
+                        </div>
+                        {% else %}
+                        
+                        <div class="login">
+                            <a href="{{ url_for('login')}}">Login</a>
+                        </div>
+                        <div class="signup">
+                            <a href="{{ url_for('signup') }}">Sign Up</a>
+                        </div>
+                        {% endif %}
+
+                        {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-success" role="alert">
+                            {{ message }}
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+                        {% endwith%}
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="intro-text">
+                        <h2>Find your next top tech job in 1 week.</h2>
+                        <p>Are you a top 2% Software Engineer, Product Manager or Data Scientist?</p>
+                        <a href="#">Find Your Job</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="intro-img">
+                        <img src="static/img/intro-img.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="seteps-section">
+        <div class="container text-center">
+            <div class="inner-steps">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="inner-area-setep">
+                            <div class="step-logo">
+                                <img src="static/img/apply-log.png" height="60px" widtha="60px" alt="apply">
+                            </div>
+                            <div class="setup-descripts">
+                                <h2>Step 1: Complete Profile</h2>
+                                <p>
+                                    Once you are approved, we showcase you to leading Indian technology
+                                    startups
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="inner-area-setep">
+                            <div class="step-logo2">
+                                <img class="logo2" src="static/img/findjob-logo.png" height="60px" widtha="60px"
+                                    alt="apply">
+                            </div>
+                            <div class="setup-descripts">
+                                <h2>Step 2: Receive Job Offers</h2>
+                                <p>
+
+                                    Companies start sending interview requests. Talk to only the ones
+                                    you like.
+
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="inner-step-getjob">
+                            <div class="step-logo1">
+                                <img class="logo3" src="static/img/getjob-logo.png" height="60px" widtha="60px"
+                                    alt="apply">
+                            </div>
+                            <div class="setup-descripts">
+                                <h2>Step 3: Accept Dream Job</h2>
+                                <p>
+
+                                    Compare your offers and accept the best one. Hired!
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="companies-section">
+        <div class="container text-center">
+            <h1 class="company-head">Leading companies build teams on TopHire</h1>
+            <div class="col-md-12 company-logolist">
+                <div class="leading-companies">
+                    <img src="static/img/microsoft.png" height="180px" width="180px" alt="">
+
+                    <img src="static/img/scalable.png" height="180px" width="180px" alt="">
+                    <img src="static/img/slack.png" height="180px" width="180px" alt="">
+
+                    <img src="static/img/googlr.png" height="180px" width="180px" alt="">
+                    <img src="static/img/alumini.jpeg" height="200px" width="250px" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="talent">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="talent-img">
+                        <img src="static/img/talent-img.png" width="50%" alt="">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="taletn-text">
+                        <p>Got Talent?</p>
+                        <h2>Why job seekers love us</h2>
+
+                        <div class="talent-inner">
+                            <div class="icon">
+                                <img src="https://assets-global.website-files.com/636dd759d71287e8ac7e6280/636dd759d71287fab77e63b3_Star.svg"
+                                    loading="lazy" alt="" class="icon-list_icon">
+                            </div>
+                            <div class="text">
+                                <p>Unique jobs at startups and tech companies you can't find anywhere else</p>
+                            </div>
+                        </div>
+
+                        <div class="talent-inner">
+                            <div class="icon">
+                                <img src="https://assets-global.website-files.com/636dd759d71287e8ac7e6280/636dd759d7128775587e63ec_Click.svg"
+                                    loading="lazy" alt="" class="icon-list_icon">
+                            </div>
+                            <div class="text">
+                                <p>Say goodbye to cover letters - your profile is all you need. One click to apply and
+                                    you're done.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="talent-inner">
+                            <div class="icon">
+                                <img src="https://assets-global.website-files.com/636dd759d71287e8ac7e6280/636dd759d71287515d7e63b2_List.svg"
+                                    loading="lazy" alt="" class="icon-list_icon">
+                            </div>
+                            <div class="text">
+                                <p>Everything you need to know to job search - including seeing salary and stock options
+                                    upfront when looking</p>
+                            </div>
+                        </div>
+
+
+                        <div class="talent-inner">
+                            <div class="icon">
+                                <img src="https://assets-global.website-files.com/636dd759d71287e8ac7e6280/636dd759d71287b6b07e63ed_Connect.svg"
+                                    loading="lazy" alt="" class="icon-list_icon">
+                            </div>
+                            <div class="text">
+                                <p>Connect directly with founders at top startups - no third party recruiters allowed
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="button-group">
+                            <div class="button-grp">
+                                <a href="#">Learn More</a>
+                            </div>
+                            <div class="button-grp1">
+                                <a href="{{ url_for('signup') }}">Sign Up Now</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="icons-footer text-center">
+            <a href=""><img src="static/img/insta3d.webp" height="30" width="30" alt=""></a>
+            <a href=""><img src="static/img/linkden1.jpeg" height="30" width="30" alt=""></a>
+            <a href=""><img src="static/img/twitter3d1.png" height="25" width="25" alt=""></a>
+            <a href=""><img src="static/img/github3d.jpeg" height="30" width="30" alt=""></a>
+
+        </div>
+        <div class="copyright text-center">
+            <p>This site designed by @Tanyagupta </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
